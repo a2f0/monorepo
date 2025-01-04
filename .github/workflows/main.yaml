@@ -4,7 +4,7 @@ on:
   push:
     branches: '**'
 jobs:
-  code-quality:
+  code-quality-macos:
     runs-on: macos-latest
     continue-on-error: false
     steps:
