@@ -10,10 +10,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: rustup update
+    - run: cargo clippy
+    - run: cargo test
   code-quality-linux:
     runs-on: ubuntu-latest
     continue-on-error: false
     steps:
     - uses: actions/checkout@v4
     - run: rustup update
+    - run: cargo clippy
+    - run: cargo test
  
