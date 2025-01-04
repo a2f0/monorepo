@@ -9,6 +9,7 @@ jobs:
     continue-on-error: false
     steps:
     - uses: actions/checkout@v4
+    - working-directory: rust/
     - run: rustup update
     - run: cargo clippy
     - run: cargo test
@@ -17,6 +18,7 @@ jobs:
     continue-on-error: false
     steps:
     - uses: actions/checkout@v4
+    - working-directory: rust/
     - run: rustup update
     - run: cargo clippy
     - run: cargo test
