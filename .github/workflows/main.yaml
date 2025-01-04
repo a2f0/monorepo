@@ -9,9 +9,11 @@ jobs:
     continue-on-error: false
     steps:
     - uses: actions/checkout@v4
+    - run: rustup update
   code-quality-linux:
     runs-on: ubuntu-latest
     continue-on-error: false
     steps:
     - uses: actions/checkout@v4
+    - run: rustup update
  
