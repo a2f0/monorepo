@@ -9,17 +9,21 @@ jobs:
     continue-on-error: false
     steps:
     - uses: actions/checkout@v4
-    - working-directory: rust/
-    - run: rustup update
-    - run: cargo clippy
-    - run: cargo test
+    - name: Run Rust checks
+      working-directory: rust/
+      run: |
+        rustup update
+        cargo clippy
+        cargo test
+
   code-quality-linux:
     runs-on: ubuntu-latest
     continue-on-error: false
     steps:
     - uses: actions/checkout@v4
-    - working-directory: rust/
-    - run: rustup update
-    - run: cargo clippy
-    - run: cargo test
- 
+    - name: Run Rust checks
+      working-directory: rust/
+      run: |
+        rustup update
+        cargo clippy
+        cargo test
