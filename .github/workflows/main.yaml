@@ -1,0 +1,17 @@
+name: Github Actions
+
+on:
+  push:
+    branches: '**'
+jobs:
+  code-quality:
+    runs-on: macos-latest
+    continue-on-error: false
+    steps:
+    - uses: actions/checkout@v4
+  code-quality-linux:
+    runs-on: ubuntu-latest
+    continue-on-error: false
+    steps:
+    - uses: actions/checkout@v4
+ 
