@@ -1,9 +1,5 @@
 name: Github Actions
 
-.shared_steps: &shared_steps
-  steps:
-    - uses: actions/checkout@v4
-    - run: rustup update
 on:
   push:
     branches: '**'
@@ -11,9 +7,13 @@ jobs:
   code-quality-macos:
     runs-on: macos-latest
     continue-on-error: false
-    <<: *shared_steps
+    steps:
+    - uses: actions/checkout@v4
+    - run: rustup update
   code-quality-linux:
     runs-on: ubuntu-latest
     continue-on-error: false
-    <<: *shared_steps
+    steps:
+    - uses: actions/checkout@v4
+    - run: rustup update
  
