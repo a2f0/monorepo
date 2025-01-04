@@ -27,3 +27,15 @@ jobs:
         rustup update
         cargo clippy
         cargo test
+
+  code-quality-windows:
+    runs-on: windows-latest
+    continue-on-error: false
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run Rust checks
+      working-directory: rust/
+      run: |
+        rustup update
+        cargo clippy
+        cargo test
